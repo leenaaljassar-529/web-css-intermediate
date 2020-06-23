@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: rgb(254, 253, 253);
+        background: linear-gradient(
+          180deg,
+          rgba(254, 253, 253, 1) 0%,
+          rgba(230, 229, 229, 1) 51%,
+          rgba(203, 198, 198, 1) 100%
+        );
+      }
+      .title {
+        font-size: 50px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #47727f;
+      }
+
+      li {
+        float: left;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: rgba(83, 81, 81, 0.411);
+      }
+
+      .active {
+        background-color: #b35b58;
+      }
+      .section1 table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .section1 {
+        margin: 20px;
+      }
+      .width {
+        width: 40%;
+      }
+      .biology {
+        background-color: #458f9f;
+        color: white;
+        font-size: 30px;
+      }
+      .chemistry {
+        background-color: #ec6766;
+        color: white;
+        font-size: 30px;
+      }
+      .physics {
+        background-color: #f0b74b;
+        color: white;
+        font-size: 30px;
+      }
+      .blue {
+        background-color: #47727f;
+        color: white;
+      }
+      .red {
+        background-color: #b35b58;
+        color: white;
+      }
+      .yellow {
+        background-color: #d9ae5a;
+        color: white;
+      }
+      img {
+        width: 75px;
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      .header {
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 10px;
+        font-family: "Orbitron", sans-serif;
+        color: #2e4048;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Full-width input fields */
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      /* Add a background color when the inputs get focus */
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+
+      button:hover {
+        opacity: 1;
+      }
+
+      /* Extra styles for the cancel button */
+      .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+      }
+
+      /* Float cancel and signup buttons and add an equal width */
+      .cancelbtn,
+      .signupbtn {
+        float: left;
+        width: 50%;
+      }
+
+      /* Add padding to container elements */
+      .container {
+        padding: 16px;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: #474e5d;
+        padding-top: 50px;
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* Style the horizontal ruler */
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      /* The Close Button (x) */
+      .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #f1f1f1;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #f44336;
+        cursor: pointer;
+      }
+
+      /* Clear floats */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* Change styles for cancel button and signup button on extra small screens */
+      @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        font-family: "Open Sans", sans-serif;
+        font-size: medium;
+      }
+      .footer {
+        padding: 10px;
+
+        text-align: center;
+        background: #bebebe;
+      }
+      .footer h4 {
+        color: whitesmoke;
+        font-family: "Open Sans", sans-serif;
+        display: inline;
+      }
+      .image {
+        display: inline;
+      }
+
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: #717171;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 75%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Science Revision!</h1>
+    </div>
+    <navbar>
+      <ul>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+        <li style="float: right;">
+          <a class="active" href="home.html">Home</a>
+        </li>
+      </ul>
+    </navbar>
+    <div class="section1">
+      <table>
+        <tr>
+          <th class="width physics" rowspan="5">
+            Physics <img src="img/201646.svg" />
+          </th>
+          <th class="yellow">Subtopics</th>
+        </tr>
+        <tr>
+          <td>Measurements and uncertainties</td>
+        </tr>
+        <tr>
+          <td>Mechanics</td>
+        </tr>
+        <tr>
+          <td>Thermal Physics</td>
+        </tr>
+        <tr>
+          <td>Waves</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section1">
+      <table>
+        <tr>
+          <th class="width chemistry" rowspan="5">
+            Chemistry
+            <img src="img/201607.svg" />
+          </th>
+          <th class="red">Subtopics</th>
+        </tr>
+        <tr>
+          <td>Stochiometry</td>
+        </tr>
+        <tr>
+          <td>Periodicity</td>
+        </tr>
+        <tr>
+          <td>Chemical bonding</td>
+        </tr>
+        <tr>
+          <td>Organic Chemistry</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section1">
+      <table>
+        <tr>
+          <th class="width biology" rowspan="5">
+            Biology <img src="img/page1.svg" />
+          </th>
+          <th class="blue">Subtopics</th>
+        </tr>
+        <tr>
+          <td>Cells</td>
+        </tr>
+        <tr>
+          <td>Molecular biology</td>
+        </tr>
+        <tr>
+          <td>Genetics</td>
+        </tr>
+        <tr>
+          <td>Ecology</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <a href="https://www.freepik.com/free-photos-vectors/design"
+      >Design vector created by macrovector - www.freepik.com</a
+    > -->
+
+    <div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./img/physics.jpg" style="width: 75%;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./img/chemistry.jpeg" style="width: 75%;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./img/biology.jpg" style="width: 75%;" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </div>
+    <footer>
+      <h2>
+        Click here to sign up to our weekly newsletter!
+      </h2>
+
+      <button
+        onclick="document.getElementById('id01').style.display='block'"
+        style="width: auto;"
+      >
+        Sign Up
+      </button>
+
+      <div id="id01" class="modal">
+        <span
+          onclick="document.getElementById('id01').style.display='none'"
+          class="close"
+          title="Close Modal"
+          >&times;</span
+        >
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>
+              sign up to our mailing list to recieve tips and tricks about
+              studying science!
+            </p>
+            <hr />
+            <label for="psw"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="psw" required />
+
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="remember"
+                style="margin-bottom: 15px;"
+              />
+              Remember me
+            </label>
+
+            <p>
+              By creating an account you agree to our
+              <a href="#" style="color: dodgerblue;">Terms & Privacy</a>.
+            </p>
+
+            <div class="clearfix">
+              <button
+                type="button"
+                onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById("id01");
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      </script>
+
+      <div class="footer">
+        <h4>Follow us on our social media accounts!</h4>
+        <a target="_blank" href="https://twitter.com/Barmej">
+          <img class="image" width="30px" height="70px" src="img/twitter.png" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/barmej/">
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="img/instagram.png"
+            alt="instagram"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/channel/UCgPcdAKRzBjRP4zq-x5KfWg"
+        >
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="./img/youtube.png"
+          />
+        </a>
+        <a target="_blank" href="https://www.pinterest.com/">
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="img/pintrest.png"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+      .title {
+        font-size: 50px;
+      }
+      .navigation {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #47727f;
+      }
+
+      .up {
+        float: left;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .up a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .up a:hover:not(.active) {
+        background-color: rgba(83, 81, 81, 0.411);
+      }
+
+      .active {
+        background-color: #b35b58;
+      }
+
+      .header {
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 10px;
+        font-family: "Orbitron", sans-serif;
+        color: #2e4048;
+      }
+
+      .yellow {
+        background-color: #d9ae5a;
+        color: white;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      .physics {
+        background-color: #458f9f;
+        color: white;
+        font-size: 45px;
+      }
+      .section1 table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      .section1 {
+        margin: 20px;
+      }
+
+      .list {
+        text-align: left;
+      }
+      .small {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+        padding-left: 20px;
+        background-color: #578b9b7a;
+      }
+
+      h2 {
+        font-family: "Open Sans", sans-serif;
+        font-size: medium;
+      }
+      .footer {
+        padding: 10px;
+
+        text-align: center;
+        background: #bebebe;
+      }
+      .footer h4 {
+        color: whitesmoke;
+        font-family: "Open Sans", sans-serif;
+        display: inline;
+      }
+      .image {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Science Revision!</h1>
+    </div>
+    <navbar>
+      <ul class="navigation">
+        <li class="up"><a href="physics.html">Physics</a></li>
+        <li class="up">
+          <a href="chemistry.html">Chemistry</a>
+        </li>
+        <li class="up"><a class="active" href="biology.html">Biology</a></li>
+        <li class="up" style="float: right;">
+          <a href="home.html">Home</a>
+        </li>
+      </ul>
+    </navbar>
+    <div class="section1">
+      <table>
+        <tr>
+          <th class="width physics" colspan="2">
+            Biology
+          </th>
+        </tr>
+        <tr>
+          <td class="small">Cells</td>
+          <td>
+            <ul class="list">
+              <li>topic 1</li>
+              <li>topic 2</li>
+              <li>topic 3</li>
+              <li>topic 4</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="small">Molecular biology</td>
+          <td>
+            <ul class="list">
+              <li>topic 1</li>
+              <li>topic 2</li>
+              <li>topic 3</li>
+              <li>topic 4</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="small">Genetics</td>
+          <td>
+            <ul class="list">
+              <li>topic 1</li>
+              <li>topic 2</li>
+              <li>topic 3</li>
+              <li>topic 4</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="small">Ecology</td>
+          <td>
+            <ul class="list">
+              <li>topic 1</li>
+              <li>topic 2</li>
+              <li>topic 3</li>
+              <li>topic 4</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer">
+        <h4>Follow us on our social media accounts!</h4>
+        <a target="_blank" href="https://twitter.com/Barmej">
+          <img class="image" width="30px" height="70px" src="img/twitter.png" />
+        </a>
+        <a target="_blank" href="https://www.instagram.com/barmej/">
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="img/instagram.png"
+            alt="instagram"
+          />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/channel/UCgPcdAKRzBjRP4zq-x5KfWg"
+        >
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="./img/youtube.png"
+          />
+        </a>
+        <a target="_blank" href="https://www.pinterest.com/">
+          <img
+            class="image"
+            width="30px"
+            height="70px"
+            src="img/pintrest.png"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
